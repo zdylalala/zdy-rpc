@@ -35,7 +35,7 @@ RpcService实现如下:<br/>
 ![](pic/4.jpg)<br/>
 
 maven工程下的资源路径(resources)下需要有fdcrpc.xml配置文件，且其中有RpcServer和Regist的显示注入。
-maven的主pom文件中需要有:
+maven的主pom文件中需要有:<br />
 ![](pic/5.jpg)<br/>
 ![](pic/6.jpg)<br/>具体原因参考dubbo启动原理。
 
