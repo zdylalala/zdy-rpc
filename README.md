@@ -37,8 +37,10 @@ RpcService实现如下:<br/>
 maven工程下的资源路径(resources)下需要有fdcrpc.xml配置文件，且其中有RpcServer和Regist的显示注入。
 maven的主pom文件中需要有:<br />
 ![](pic/5.jpg)<br/>
-![](pic/6.jpg)<br/>具体原因参考dubbo启动原理。
-
+![](pic/6.jpg)<br/>具体原因:打jar包时需将依赖的lib包打出来，然后配置jar包主启动main方法，该方法框架中自带，会加载resource目录下的fdcrpc.xml文件，进而创建rpcServer将所有具有@RpcService注解的服务实现注册到所配置ip的zookeeper中。
 ### 2.2 provider注册
 在server工程下mvn clean install后:java -jar jar包名即可.
 
+###3.0client端(消费方)所需要的配置。<br />在Spring主配置文件中或者能够加载到的文件中添加如下配置：<br/>
+![](pic/7.jpg)<br/>然后直接在想用到的地方:<br />
+![](pic/8.jpg)<br />当然了，你想用@Servic注进RpcProxy也是一样的.
