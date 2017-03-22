@@ -8,11 +8,11 @@ zdy-rpc通讯框架是服务于中大型项目的远程过程调用框架。基�
 暂无
 
 ## pom依赖
-\<dependency>
-    <groupId>com.github.zdylalala</groupId>
-    \<artifactId>zdy-rpc\</artifactId>
-    \<version>1.0-RELEASE\</version>
-\</dependency>
+\<dependency><br />
+    \<groupId>com.github.zdylalala\</groupId><br />
+    \<artifactId>zdy-rpc\</artifactId><br />
+    \<version>1.0-RELEASE\</version><br />
+\</dependency><br />
 
 ## 技术支持
 邮箱: 395751951@qq.com
