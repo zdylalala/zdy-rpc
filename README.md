@@ -25,60 +25,19 @@ zdy-rpc通讯框架是服务于中大型项目的远程过程调用框架。基�
 ### 1 编写服务接口(被provider和customer共同依赖。)
 ![](pic/1.jpg)
 
-### 2 编写服务提供方，接口的实现，provider
+### 2.0 编写服务提供方，接口的实现，provider
 ![](pic/2.png)<br/>
 这里的注解为自定义注解，框架实现。表明该接口注册到zookeeper中。<br/>
 RpcService实现如下:<br/>
 ![](pic/3.jpg)<br/>
-### Import sources into your IDE
-Run `./import-into-eclipse.sh` or read `import-into-idea.md` as appropriate.
-> **Note:** Per the prerequisites above, ensure that you have JDK 8 configured properly in your IDE.
 
-### Install all spring-\* jars into your local Maven cache
-`./gradlew install`
+### 2.1  provider所需要的配置
+![](pic/4.jpg)<br/>
+maven工程下的资源路径(resources)下需要有fdcrpc.xml配置文件，且其中有RpcServer和Regist的显示注入。
+maven的主pom文件中需要有:
+![](pic/5.jpg)<br/>
+![](pic/6.jpg)<br/>具体原因参考dubbo启动原理。
 
-### Compile and test; build all jars, distribution zips, and docs
-`./gradlew build`
+### 2.2 provider注册
+在server工程下mvn clean install后:java -jar jar包名即可.
 
-... and discover more commands with `./gradlew tasks`. See also the [Gradle
-build and release FAQ][].
-
-## Contributing
-[Pull requests][] are welcome; see the [contributor guidelines][] for details.
-
-## Staying in Touch
-Follow [@SpringCentral][] as well as [@SpringFramework][] and its [team members][]
-on Twitter. In-depth articles can be found at [The Spring Blog][], and releases
-are announced via our [news feed][].
-
-## License
-The Spring Framework is released under version 2.0 of the [Apache License][].
-
-[Spring Integration]: https://github.com/spring-projects/spring-integration
-[Spring Batch]: https://github.com/spring-projects/spring-batch
-[family of projects]: http://spring.io/projects
-[Spring organization]: https://github.com/spring-projects
-[downloading Spring artifacts]: https://github.com/spring-projects/spring-framework/wiki/Downloading-Spring-artifacts
-[building a distribution with dependencies]: https://github.com/spring-projects/spring-framework/wiki/Building-a-distribution-with-dependencies
-[Javadoc]: http://docs.spring.io/spring-framework/docs/current/javadoc-api/
-[reference docs]: http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/
-[spring tags]: http://spring.io/questions
-[Stack Overflow]: http://stackoverflow.com/faq
-[Commercial support]: http://spring.io/services
-[Spring Framework JIRA]: https://jira.spring.io/browse/SPR
-[the lifecycle of an issue]: https://github.com/spring-projects/spring-framework/wiki/The-Lifecycle-of-an-Issue
-[spring-framework-issues]: https://github.com/spring-projects/spring-framework-issues#readme
-[readme]: https://github.com/spring-projects/spring-framework-issues#readme
-[Gradle]: http://gradle.org
-[`./gradlew`]: http://vimeo.com/34436402
-[Git]: http://help.github.com/set-up-git-redirect
-[JDK8 build]: http://www.oracle.com/technetwork/java/javase/downloads
-[Gradle build and release FAQ]: https://github.com/spring-projects/spring-framework/wiki/Gradle-build-and-release-FAQ
-[Pull requests]: https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests/
-[contributor guidelines]: https://github.com/spring-projects/spring-framework/blob/master/CONTRIBUTING.md
-[@SpringFramework]: https://twitter.com/springframework
-[@SpringCentral]: https://twitter.com/springcentral
-[team members]: https://twitter.com/springframework/lists/team/members
-[The Spring Blog]: http://spring.io/blog/
-[news feed]: http://spring.io/blog/category/news
-[Apache License]: http://www.apache.org/licenses/LICENSE-2.0
