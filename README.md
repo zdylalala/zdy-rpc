@@ -23,10 +23,7 @@ zdy-rpc通讯框架是服务于中大型项目的远程过程调用框架。基�
 ## 项目讲解
 该讲解基于熟练掌握dubbo框架的使用的前提下。作者水平有限。常识与细节不与过多描述。
 ### 1 编写服务接口(被provider和customer共同依赖。)
-[Git][] and [JDK 8 update 20 or later][JDK8 build]
-
-Be sure that your `JAVA_HOME` environment variable points to the `jdk1.8.0` folder
-extracted from the JDK download.
+![](pic/1.png)
 
 ### Check out sources
 `git clone git@github.com:spring-projects/spring-framework.git`
