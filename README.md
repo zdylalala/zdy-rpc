@@ -4,33 +4,24 @@ zdy的私人rpc通讯框架
 ## 简介
 zdy-rpc通讯框架是服务于中大型项目的远程过程调用框架。基于dubbo的二次开发，适用于想摆脱dubbo沉重通讯配置的工程。<br/>优点:配置简单，基于dubbo核心，具有服务注册，服务发现，动态兼容版本，负载均衡等核心功能。基于zookeeper通讯协议进行服务管理。<br/>缺点:不支持服务治理。
 
-## Code of Conduct
-This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.adoc).
-By participating, you  are expected to uphold this code. Please report unacceptable behavior to spring-code-of-conduct@pivotal.io.
+## 使用手册
+暂无
 
-## Downloading Artifacts
-See [downloading Spring artifacts][] for Maven repository information. Unable to
-use Maven or other transitive dependency management tools?
-See [building a distribution with dependencies][].
+## pom依赖
+<dependency>
+    <groupId>com.github.zdylalala</groupId>
+    <artifactId>zdy-rpc</artifactId>
+    <version>1.0-RELEASE</version>
+</dependency>
 
-## Documentation
-See the current [Javadoc][] and [reference docs][].
+## 技术支持
+邮箱: 395751951@qq.com
+根据开发者实际情况提供技术支持。
+## 版权所有
+开源免费。
 
-## Getting Support
-Check out the [spring][spring tags] tags on [Stack Overflow][]. [Commercial support][]
-is available too.
+## 快速开始
 
-## Issue Tracking
-Report issues via the [Spring Framework JIRA][]. Understand our issue management
-process by reading about [the lifecycle of an issue][]. Think you've found a
-bug? Please consider submitting a reproduction project via the
-[spring-framework-issues][] GitHub repository. The [readme][] there provides
-simple step-by-step instructions.
-
-## Building from Source
-The Spring Framework uses a [Gradle][]-based build system. In the instructions
-below, [`./gradlew`][] is invoked from the root of the source tree and serves as
-a cross-platform, self-contained bootstrap mechanism for the build.
 
 ### Prerequisites
 
