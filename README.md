@@ -33,6 +33,7 @@ RpcService实现如下:<br/>
 
 ### 2.1  provider所需要的配置
 ![](pic/4.jpg)<br/>
+
 maven工程下的资源路径(resources)下需要有fdcrpc.xml配置文件，且其中有RpcServer和Regist的显示注入。
 maven的主pom文件中需要有:
 ![](pic/5.jpg)<br/>
