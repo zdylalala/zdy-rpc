@@ -44,4 +44,4 @@ maven的主pom文件中需要有:<br />
 ### 3.0client端(消费方)所需要的配置。<br />
 在Spring主配置文件中或者能够加载到的文件中添加如下配置：<br/>
 ![](pic/7.jpg)<br/>然后直接在想用到的地方:<br />
-![](pic/8.jpg)<br />当然了，你想用@Servic注进RpcProxy也是一样的.
+![](pic/8.jpg)<br />当然了，你想用@Service注进RpcProxy也是一样的.
